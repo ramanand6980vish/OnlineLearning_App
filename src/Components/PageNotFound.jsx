@@ -1,0 +1,18 @@
+import { Link } from "react-router";
+
+
+
+
+export default function  PageNOtFound (){
+
+
+    return(
+        <div style={{alignItems:"center",textAlign:"center", color:"red",fontWeight:"bold", fontSize:"30px"}}>
+            <div><h1>Page Not Found</h1></div>
+            
+            <img style={{height:"300px"}} src="data:image/png;base64,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" alt="error pic" />
+            <Link to="/" style={{textDecoration: 'none',border:'2px solid red',borderRadius:'8px',backgroundColor:'skyblue' }}>Back to main</Link>
+            
+        </div>
+    )
+}
