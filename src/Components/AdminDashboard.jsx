@@ -11,35 +11,6 @@ export default function AdminDashboard() {
 
   return (
     <div className="d-flex" style={{ minHeight: "100vh" }}>
-      {/* Sidebar */}
-      {/* <div
-        className="bg-dark text-white p-3"
-        style={{ width: "220px", minHeight: "100vh" }}
-      >
-        <h4 className="text-center mb-4">{role} Panel</h4>
-        <ul className="nav flex-column">
-          <li className="nav-item mb-2">
-            <a href="#" className="nav-link text-white">
-              Dashboard
-            </a>
-          </li>
-          <li className="nav-item mb-2">
-            <a href="#" className="nav-link text-white">
-              Manage Users
-            </a>
-          </li>
-          <li className="nav-item mb-2">
-            <a href="#" className="nav-link text-white">
-              Reports
-            </a>
-          </li>
-          <li className="nav-item mb-2">
-            <a href="#" className="nav-link text-white">
-              Settings
-            </a>
-          </li>
-        </ul>
-      </div> */}
 
       {/* Main Content */}
       <div className="flex-grow-1 p-4" style={{ backgroundColor: "#f8f9fa" }}>
@@ -116,10 +87,10 @@ export default function AdminDashboard() {
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>Jane Smith</td>
-                  <td>jane@example.com</td>
+                  <td>Anup Vishwakarma</td>
+                  <td>anup@example.com</td>
                   <td>Teacher</td>
-                  <td>Active</td>
+                  <td className="text-success">Active</td>
                   <td>
                     <button className="btn btn-sm btn-warning me-2">Edit</button>
                     <button className="btn btn-sm btn-danger">Delete</button>
