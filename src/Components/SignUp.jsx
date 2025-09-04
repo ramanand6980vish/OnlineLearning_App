@@ -61,9 +61,7 @@ export default function SignUp() {
     alert("Google login clicked\nThis feature is under development");
   };
 
-  const handleEmail = () => {
-    alert("Gmail login clicked\nThis feature is under development");
-  };
+ 
 
   return (
     <div className="d-flex justify-content-center align-items-center pt-5 bg-light">
@@ -162,11 +160,9 @@ export default function SignUp() {
 
         {/* Alternate login */}
         <div onClick={handleGoogle} style={alternateLogin}>
-          <img src={googleIcon} alt="Google" style={iconImg} /> Login with Google
+          <img src={googleIcon} alt="Google" style={iconImg} /> SignUp with Google
         </div>
-        <div onClick={handleEmail} style={alternateLogin}>
-          <img src={gmailIcon} alt="Gmail" style={iconImg} /> Login with Gmail
-        </div>
+       
       </div>
     </div>
   );
