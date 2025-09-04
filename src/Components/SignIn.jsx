@@ -70,9 +70,7 @@ export default function SignIn() {
     alert("Google login clicked\nThis feature is under development");
   }
 
-  const handleEmail = () => {
-    alert("Gmail login clicked\nThis feature is under development");
-  }
+ 
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light position-relative">
@@ -146,7 +144,6 @@ export default function SignIn() {
         </p>
         <div style={{textAlign:'center', fontWeight:'bold'}}>OR
           <div onClick={handleGoogle} style={alternateLogin}> <img src={googleIcon} style={iconImg} /> Login with Google</div>
-          <div onClick={handleEmail} style={alternateLogin}><img src={gmailIcon} style={iconImg} />Login with Gmail</div>
         </div>
 
         
