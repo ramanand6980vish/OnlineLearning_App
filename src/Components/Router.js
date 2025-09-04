@@ -1,6 +1,5 @@
 
 import { Link, Outlet, Route, Routes } from "react-router";
-import styled from "styled-components";
 import Navbar from "./Navbar";
 import About from "./About";
 import Contact from "./Contact";
@@ -10,6 +9,8 @@ import Courses from "./Courses";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Dashboard from "./Dashboard";
+import TDashboard from "./TDashboard";
+import AdminDashboard from "./AdminDashboard";
 
 
 
@@ -28,6 +29,8 @@ export default function Router() {
                     <Route path="/signin" element={<SignIn />} />
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/tdashboard" element={<TDashboard />} />
+                    <Route path="/admindashboard" element={<AdminDashboard />} />
 
                     
 

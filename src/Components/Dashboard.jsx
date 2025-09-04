@@ -1,45 +1,29 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useAuth } from "./AuthContext";
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function Dashboard() {
+  const navigate = useNavigate();
+  const { setIsSuccess } = useAuth();
+
   const [user] = useState({
     name: "Ramanand Vishwakarma",
-    email: "ramanand.vi2011@gmail.com",
+    email: "ramanand@gmail.com",
   });
 
+  const handleLogout = () => {
+    setTimeout(() => {
+      setIsSuccess(false);
+      localStorage.removeItem("IsSuccess");
+      navigate("/signin");
+    }, 2000)
+  };
   return (
-    <div className="d-flex vh-100">
-      {/* Sidebar */}
-      <div className="bg-dark text-white p-3" style={{ width: "250px" }}>
-        <h4 className="text-center mb-4">Dashboard</h4>
-        <ul className="nav flex-column">
-          <li className="nav-item mb-2">
-            <a href="#" className="nav-link text-white">
-              Home
-            </a>
-          </li>
-          <li className="nav-item mb-2">
-            <a href="#" className="nav-link text-white">
-              My Courses
-            </a>
-          </li>
-          <li className="nav-item mb-2">
-            <a href="#" className="nav-link text-white">
-              Profile
-            </a>
-          </li>
-          <li className="nav-item mb-2">
-            <a href="#" className="nav-link text-white">
-              Settings
-            </a>
-          </li>
-          <li className="nav-item mt-4">
-            <a href="/signin" className="btn btn-danger w-100">
-              Logout
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div className="d-flex vh-100 w-100 m-0">
+
 
       {/* Main Content */}
       <div className="flex-grow-1 p-4 bg-light overflow-auto">
